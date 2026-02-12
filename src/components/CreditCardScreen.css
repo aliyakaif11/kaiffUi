@@ -1,0 +1,369 @@
+:root {
+  --ios-font: -apple-system, BlinkMacSystemFont,
+    "SF Pro Display", "SF Pro Text",
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  font-family: var(--ios-font);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= iPhone 16 Frame ================= */
+
+.phone-frame {
+  width: 393px;
+  height: 852px;
+  /* background: #000; */
+  color: white;
+  margin: 30px auto;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  border-radius: 55px;
+  overflow: hidden;
+  position: relative;
+  box-shadow:
+    0 0 0 2px #1c1c1e,
+    0 10px 12px rgba(0, 0, 0, 0.65);
+}
+
+/* Home Indicator */
+.phone-frame::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 5px;
+  background: #fff;
+  border-radius: 3px;
+  opacity: 0.9;
+}
+
+/* ================= Top Header ================= */
+
+.top-header {
+  position: relative;
+  height: 95px;
+  background: #e1006f;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 20px 20px;
+  border-top-left-radius: 55px;
+  border-top-right-radius: 55px;
+}
+
+.header-time {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.dynamic-island {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 126px;
+  height: 34px;
+  background: #000;
+  border-radius: 22px;
+}
+
+.status-right {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.network-type {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.signal-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 1px;
+}
+
+.signal-bars span {
+  width: 2px;
+  background: #fff;
+  border-radius: 1px;
+}
+
+.signal-bars span:nth-child(1) { height: 4px; opacity: 0.4; }
+.signal-bars span:nth-child(2) { height: 6px; opacity: 0.6; }
+.signal-bars span:nth-child(3) { height: 8px; opacity: 0.8; }
+.signal-bars span:nth-child(4) { height: 10px; }
+
+.status-battery {
+  width: 18px;
+  height: 9px;
+  border-radius: 2px;
+  border: 1.5px solid #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1px;
+}
+
+.status-battery::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 2px;
+  width: 2px;
+  height: 4px;
+  border-radius: 1px;
+  background: #fff;
+}
+
+.battery-fill {
+  height: 100%;
+  border-radius: 1px;
+  background: #fff;
+}
+
+.battery-fill.half {
+  width: 50%;
+}
+
+.header-menu {
+  position: absolute;
+  left: 18px;
+  bottom: 20px;
+  font-size: 22px;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.header-home {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 22px;
+}
+
+/* ================= Summary Card ================= */
+
+.summary-card {
+  margin: 0;
+  border-radius: 0;
+  /* border-bottom-left-radius: 26px;
+  border-bottom-right-radius: 24px; */
+  position: relative;
+  overflow: hidden;
+  min-height: 215px;
+  background: #000;
+}
+
+.summary-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/card-bg.png");
+  background-size: cover;
+  background-position: center right;
+  opacity: 0.95;
+  z-index: 0;
+}
+
+.summary-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.85) 60%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+.summary-content {
+  position: relative;
+  z-index: 2;
+  padding: 22px;
+}
+
+.summary-month {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.summary-cardno {
+  font-size: 12px;
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+.summary-info {
+  margin-top: 8px;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.summary-row {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.summary-amount {
+  font-size: 20px;
+  margin-top: 6px;
+}
+
+.summary-date {
+  margin-top: 20px;
+}
+
+.date-text {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* ================= Transactions ================= */
+
+.transactions {
+  background: #ffffff;
+  margin-top: -2px;
+  border-radius: 0 0 26px 26px;
+  padding: 22px 20px 30px;
+  color: #000;
+}
+
+.tx-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.download-icon {
+  font-size: 17px;
+}
+
+.emi-box {
+  background: #e9f3ff;
+  display: flex;
+  gap: 10px;
+  padding: 14px 20px;
+
+  /* Make it full width */
+  margin: 15px -20px;  /* cancels parent padding */
+}
+
+.star {
+  font-size: 20px;
+}
+
+.emi-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.emi-sub {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.tx-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 6px;
+  border-bottom: 1px solid #ececec;
+}
+
+.tx-left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.date {
+  width: 48px;
+  height: 48px;
+  background: #f2f2f7;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.day {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+
+.month {
+  font-size: 10px;
+  color: #777;
+  margin-top: 2px;
+}
+
+.tx-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tx-ref {
+  font-size: 10px;
+  color: #777;
+}
+
+.tx-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 95px;
+  justify-content: flex-end;
+}
+
+.tx-amount {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+}
+
+.red { color: #ff0000; }
+.green { color: #3a8d3a; }
+
+.arrow {
+  font-size: 11px;
+  opacity: 0.9;
+  display: inline-block;
+}
+
+.arrow.red {
+  transform: rotate(45deg);
+}
+
+.arrow.green {
+  transform: rotate(-135deg);
+}
