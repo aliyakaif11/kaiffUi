@@ -64,7 +64,7 @@ const CreditCardScreen = () => {
         <div className="transactions">
 
           <div className="tx-header">
-            <span>All Transactions (25)</span>
+            <span>All Transactions (15)</span>
             <span className="download-icon"></span>
           </div>
 
