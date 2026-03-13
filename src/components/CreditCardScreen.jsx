@@ -127,7 +127,7 @@ const CreditCardScreen = () => {
             </div>
             <div className="tx-right">
               <span className="tx-amount">₹5,000.00</span>
-              <span className="arrow red">↑</span>
+              <span className="arrow green">↑</span>
             </div>
           </div>
 
