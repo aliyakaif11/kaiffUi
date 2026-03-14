@@ -121,7 +121,7 @@ const CreditCardScreen = () => {
                 <span className="month">MAR</span>
               </div>
               <div>
-                <div className="tx-title">BBPS PAYMENT RECEIVED.</div>
+                <div className="tx-title">BBPS PAYMENT RECEIVED</div>
                 <div className="tx-ref">REF# 63190574826</div>
               </div>
             </div>
@@ -138,7 +138,7 @@ const CreditCardScreen = () => {
                 <span className="month">MAR</span>
               </div>
               <div>
-                <div className="tx-title">CASHBACK CREDIT FEB26.</div>
+                <div className="tx-title">CASHBACK CREDIT FEB26</div>
                 <div className="tx-ref">REF# 11547625366</div>
               </div>
             </div>
