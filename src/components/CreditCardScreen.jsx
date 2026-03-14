@@ -139,7 +139,7 @@ const CreditCardScreen = () => {
               </div>
               <div>
                 <div className="tx-title">CASHBACK CREDIT FEB26</div>
-                <div className="tx-ref">REF# 24680917354div>
+                <div className="tx-ref">REF# 24680917354</div>
               </div>
             </div>
             <div className="tx-right">
